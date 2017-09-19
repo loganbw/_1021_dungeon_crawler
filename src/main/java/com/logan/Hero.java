@@ -4,7 +4,7 @@ import java.util.Random;
 
 public  class Hero {
     private String name;
-    private int strength = 5;
+    private int strength = 3;
     private int health = 50;
     private int stealth = 9;
     private int flee = 6;
