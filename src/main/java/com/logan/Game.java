@@ -28,10 +28,10 @@ public class Game {
               System.out.println("monsters there");
               while (!monster.death()) {
                   logan.advance();
-              if (logan.advance() == true) {
-                  System.out.println("The monster does not see you yet! would you like to advance past him?");
-                  myInput = scanner.next();
-                  if (myInput.compareToIgnoreCase("advance") == 0){
+                  if (logan.advance() == false) {
+                      System.out.println("The monster does not see you yet! would you like to advance past him?");
+                      myInput = scanner.next();
+                      if (myInput.compareToIgnoreCase("advance") == 0){
                       break;
                   }
               }

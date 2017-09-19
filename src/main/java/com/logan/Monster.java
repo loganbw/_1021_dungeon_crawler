@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Monster {
     private String monsterType;
-    private int strength = 6;
-    private int health = 20;
+    private int strength = 5;
+    private int health = 10;
     Random rng = new Random();
-    int roll = rng.nextInt(10) + 1;
-    private int damageDealt = roll;
+    int rollD = rng.nextInt(5) + 1;
+    private int damageDealt = rollD;
 
     public int getDamageDealt() {
         return damageDealt;

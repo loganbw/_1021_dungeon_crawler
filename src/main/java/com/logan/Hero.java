@@ -44,7 +44,7 @@ public  class Hero {
         }
     }
     public boolean flee(){
-        //int roll = rng.nextInt(10);
+        int roll = rng.nextInt(10);
         if (flee <= roll){
            // System.out.println("you flee");
             return true;
@@ -54,8 +54,8 @@ public  class Hero {
         }
     }
     public boolean advance(){
-       // int roll = rng.nextInt(10);
-        if (stealth <= roll){
+        int roll = rng.nextInt(10);
+        if (stealth >= roll){
           //  System.out.println("you advance through the floor");
             return true;
         } else{
