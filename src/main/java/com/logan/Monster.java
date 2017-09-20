@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Monster {
     private String monsterType;
-    private int strength = 4;
+    private int strength = 6;
     private int health = 25;
     Random rng = new Random();
     int rollD = rng.nextInt(5) + 1;
@@ -27,7 +27,7 @@ public class Monster {
     }
 
     public boolean attack(){
-        int roll = rng.nextInt(10);
+        int roll = rng.nextInt(10) + 1;
         if (strength <= roll){
            // System.out.println("the monster hit you!");
             return true;

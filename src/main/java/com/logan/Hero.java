@@ -4,13 +4,35 @@ import java.util.Random;
 
 public  class Hero {
     private String name;
+    //less is better unless its the health int
     private int strength = 3;
-    private int health = 16;
-    private int stealth = 8;
+    private int health = 50;
+    private int stealth = 9;
     private int flee = 6;
     Random rng = new Random();
     int rollD = rng.nextInt(20) + 1;
     private int damageDealt = rollD;
+
+    public Hero(String name, int strength, int health, int stealth, int flee, Random rng) {
+        this.name = name;
+        this.strength = strength;
+        this.health = health;
+        this.stealth = stealth;
+        this.flee = flee;
+        this.rng = rng;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setStealth(int stealth) {
+        this.stealth = stealth;
+    }
+
+    public void setFlee(int flee) {
+        this.flee = flee;
+    }
 
     public void setHealth(int health) {
         this.health = health;
@@ -58,7 +80,7 @@ public  class Hero {
         }
     }
     public boolean advance(){
-        int roll = rng.nextInt(10);
+        int roll = rng.nextInt(10) + 1;
         if (stealth >= roll){
           //  System.out.println("you advance through the floor");
             return true;
