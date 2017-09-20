@@ -5,7 +5,7 @@ import java.util.Random;
 public class Monster {
     private String monsterType;
     private int strength = 6;
-    private int health = 25;
+    private int health = 15;
     Random rng = new Random();
     int rollD = rng.nextInt(5) + 1;
     private int damageDealt = rollD;

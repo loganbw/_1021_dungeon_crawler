@@ -26,14 +26,13 @@ public class Game {
            System.out.println("Floor : " + startingFloor);
            System.out.println("-------------------------------------");
 
-           if (roll >= 33) {
+           if (roll >= 15) {
 
                //make a monster
                Monster monster = new Monster();
                monsterIsHere = true;
 
                boolean fightM = monster.attack();
-               System.out.println("A monster See's you and charges!");
                logan.advance();
                if (!logan.advance()){
                    System.out.println("The monster does not see you yet! would you like to advance past him?");
@@ -42,6 +41,7 @@ public class Game {
 
                    }
                } else{
+                   System.out.println("A monster See's you and charges!");
                while (!monster.death()) {
                        myInput = scanner.next();
                        if (myInput.compareToIgnoreCase("fight") == 0) {
@@ -85,12 +85,12 @@ public class Game {
                        if(monster.death()){
                            System.out.println("monster is slain");
                        }
-                   }
                    if (logan.death() == true) {
                        System.out.println("your hero is dead! Try again next time!");
                        break;
 
                    }
+               }
                }
            }else {
                System.out.println("there are no monsters here. You run quickly to the stairs!");

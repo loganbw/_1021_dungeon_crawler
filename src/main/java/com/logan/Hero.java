@@ -6,7 +6,7 @@ public  class Hero {
     private String name;
     //less is better unless its the health int
     private int strength = 3;
-    private int health = 50;
+    private int health = 40;
     private int stealth = 9;
     private int flee = 6;
     Random rng = new Random();
