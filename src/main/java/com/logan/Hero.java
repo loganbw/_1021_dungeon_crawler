@@ -5,12 +5,12 @@ import java.util.Random;
 public  class Hero {
     private String name;
     private int strength = 3;
-    private int health = 50;
-    private int stealth = 9;
+    private int health = 16;
+    private int stealth = 8;
     private int flee = 6;
     Random rng = new Random();
-    int roll = rng.nextInt(10) + 1;
-    private int damageDealt = roll;
+    int rollD = rng.nextInt(20) + 1;
+    private int damageDealt = rollD;
 
     public void setHealth(int health) {
         this.health = health;
