@@ -32,6 +32,10 @@ public  class Hero {
 
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public boolean fight(){
         int roll = rng.nextInt(10);
         if( strength <= roll){

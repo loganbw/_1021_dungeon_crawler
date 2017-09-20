@@ -1,5 +1,7 @@
 package com.logan;
 
+import com.logan.models.Fighter;
+
 import java.util.Random;
 import java.util.Scanner;
 
